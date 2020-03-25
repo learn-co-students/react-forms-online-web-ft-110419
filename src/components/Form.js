@@ -1,4 +1,3 @@
-// src/components/Form
 import React from 'react';
  
 class Form extends React.Component {
@@ -8,14 +7,15 @@ class Form extends React.Component {
         <form>
           <input
             type="text"
-            onChange={event => this.props.handleFirstNameChange(event)}
+            name="firstName"
+            onChange={event => this.props.handleChange(event)}
             value={this.props.formData.firstName}
           />
           <input
             type="text"
-            onChange={event => this.props.handleLastNameChange(event)}
-            value={this.props.formData.lastName}
-          />
+            name="lastName"
+            onChange={event => this.props.handleChange(event)}
+            value={this.props.formData.lastName} />
         </form>
       </div>
     )
